@@ -1,0 +1,54 @@
+version: "3.8"
+services:
+  web:
+    container_name: myreactnotes_firebase_container
+    restart: always
+    build: .
+    environment:
+      CHOKIDAR_USEPOLLING: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - nodemodules:/app/node_modules
+volumes:
+  nodemodules: {}
+
+
+
+
+# version: '3.4'
+# services:
+#   myapp:
+#     container_name: myreactnotes_firebase_container
+#     restart: always
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#       args:
+#         - PORT = ${PORT}
+#     environment:
+#       CHOKIDAR_USEPOLLING: true
+#     ports:
+#       - 3000:${PORT}
+#     env_file:
+#       - .env 
+#     volumes:
+#       - ./:/usr/local/apps/myreactnotes/dev
+#       - ignore:/usr/local/apps/myreactnotes/dev/node_modules/
+# volumes:
+#   ignore:
+
+# version: "3.8"
+# services:
+#   web:
+#     container_name: myreactnotes_firebase_container
+#     restart: always
+#     build: .
+#     environment:
+#       CHOKIDAR_USEPOLLING: true
+#     ports:
+#       - "3000:3000"
+#     volumes:
+#       - '.:/app'
+#       - '/app/node_modules'
