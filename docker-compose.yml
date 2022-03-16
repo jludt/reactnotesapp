@@ -4,8 +4,6 @@ services:
     container_name: myreactnotes_firebase_container
     restart: always
     build: .
-    environment:
-      CHOKIDAR_USEPOLLING: true
     ports:
       - "3000:3000"
     volumes:
