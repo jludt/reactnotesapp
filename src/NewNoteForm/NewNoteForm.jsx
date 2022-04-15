@@ -20,7 +20,7 @@ class NewNoteForm extends Component{
         }
 
         writeNote(){
-            // call method that sets teh noteContent for a note to
+            // call method that sets the noteContent for a note to
             // the avlue of the input
             this.props.addNote(this.state.newNoteContent);
             this.setState({
